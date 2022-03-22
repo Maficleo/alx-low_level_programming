@@ -1,39 +1,36 @@
 #include <stdio.h>
+
 /**
- * main - main project
- * Description: Print all possible different comb of 3 digits.
- * Numbers must be seperated by commas and a space
- * The 3 digits must all be different
- * all combinations of 012 are considered as same.
- * print out only smallest combo
- * print all numbers in ascending order
- * only use 'putchar' to print and 6 times at most.
- * do not use any 'char' variables.
+ * main - entry point
+ *
+ * Description: Print all possible different combinations of two digits
  * Return: 0
  */
 int main(void)
 {
-	int i, j, k, l;
+	int i;
+	int j;
+	int k;
 
-	for (i = 0; i < 1000; i++)
+	for (i = 0; i < 10; ++i)
 	{
-		j = i / 100; /* hundreds */
-		k = (i / 10) % 10; /* tens */
-		l = i % 10; /* singles */
-
-		if (j < k && k < 1)
+		for (j = i + 1; j < 10; ++j)
 		{
-			putchar(j + '0');
-			putchar(k + '0');
-			putchar(l + '0');
-
-			if (i < 700)
+			for (k = j + 1; k < 10; ++k)
 			{
-				putchar(44);
-				putchar(32);
+				putchar('0' + i);
+				putchar('0' + j);
+				putchar('0' + k);
+
+				if (i != 7 || j != 8 || k != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
+
 	putchar('\n');
 
 	return (0);
