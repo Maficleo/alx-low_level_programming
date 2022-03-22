@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - main project
- * Description: Use 'putchar' print all letters exclude 'q' and'e'.
+ * Description: using 'putchar' for lower and uppercase alphabet.
  * Return: 0
  */
 int main(void)
@@ -10,10 +10,18 @@ int main(void)
 
 	while (c <= 'z')
 	{
-		if (c != 'q' && c != 'e')
-			putchar(c);
+		putchar(c);
 		c++;
 	}
+
+	c = 'A';
+
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
+	}
+
 	putchar('\n');
 
 	return (0);
