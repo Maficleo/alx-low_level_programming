@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - Functions for rot 13.
+ * rot13 - Function that reverses the content of an array of integers.
  *
  * @str: s is the array
  *
